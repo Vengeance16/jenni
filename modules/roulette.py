@@ -16,7 +16,7 @@ random.seed()
 # edit this setting for roulette counter. Larger, the number, the harder the game.
 ROULETTE_SETTINGS = {
     # the bigger the MAX_RANGE, the harder/longer the game will be
-    'MAX_RANGE' : 5,
+    'MAX_RANGE' : 3,
 
     # game timeout in minutes (default is 1 minute)
     'INACTIVE_TIMEOUT' : 1,
@@ -58,7 +58,7 @@ def roulette (jenni, input):
     else:
         jenni.say(ROULETTE_STRINGS['TICK'])
 roulette.commands = ['roulette']
-roulette.priority = 'low'
+roulette.priority = 'high'
 roulette.rate = 60
 
 def rouletteStop (jenni, input):
@@ -73,7 +73,7 @@ def rouletteStop (jenni, input):
     else:
         jenni.say(ROULETTE_STRINGS['GAME_END_FAIL'] % (input.nick, ROULETTE_TMP['TIMEOUT'].seconds - (datetime.now() - ROULETTE_TMP['LAST-ACTIVITY']).seconds))
 rouletteStop.commands = ['roulette-stop']
-roulette.priority = 'low'
+roulette.priority = 'high'
 roulette.rate = 60
 
 if __name__ == '__main__':
