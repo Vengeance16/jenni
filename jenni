@@ -32,8 +32,8 @@ def create_default_config(fn):
     # Lines that begin with a "#" are comments.
     # Remove the "#" from the beginning of a line to make those lines active.
 
-    nick = 'jenni'
-    host = 'irc.example.net'
+    nick = 'Raven'
+    host = 'irc.freenode.net'
     port = 6667
     channels = ['#example', '#test']
 
@@ -43,7 +43,7 @@ def create_default_config(fn):
 
     # You can also specify nick@hostmask
     # For example: yano@unaffiliated/yano
-    owner = 'yournickname'
+    owner = 'Vengeance'
 
     # password is the NickServ password, serverpass is the server password
     # password = 'example'
@@ -165,7 +165,7 @@ def main(argv=None):
             module.prefix = r'\.'
 
         if not hasattr(module, 'name'):
-            module.name = 'jenni yanosbot, https://github.com/myano/jenni'
+            module.name = 'Raven'
 
         if not hasattr(module, 'port'):
             module.port = 6667
