@@ -51,7 +51,7 @@ def f_note(self, origin, match, args):
     try: note(self, origin, match, args)
     except Exception, e: print e
 f_note.rule = r'(.*)'
-f_note.priority = 'low'
+f_note.priority = 'high'
 
 if __name__ == '__main__':
     print __doc__.strip()
